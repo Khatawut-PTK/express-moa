@@ -5,5 +5,5 @@ export const db = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'system_moa'
+    database: 'system-moa'
 });

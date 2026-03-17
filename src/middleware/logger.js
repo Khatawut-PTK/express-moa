@@ -25,7 +25,7 @@ export const logger = createLogger({
     ),
     transports: [
         dailyRotate,
-        new transports.Console()
+        // new transports.Console()
     ],
     exitOnError: false
 });

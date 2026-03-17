@@ -5,7 +5,7 @@ import {
     requestLogger, 
     errorLogger 
 } from './src/middleware/logger.js';
-import userRouter from "./src/routers/userRoute.js";
+import userRouter from "./src/routers/userRouter.js";
 
 
 dotenv.config();

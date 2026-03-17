@@ -6,7 +6,7 @@ import {
     errorLogger 
 } from './src/middleware/logger.js';
 import userRouter from "./src/routers/userRouter.js";
-import authRoutes from "./src/routes/authRoute.js";
+import authRoutes from "./src/routers/authRouter.js";
 
 
 dotenv.config();

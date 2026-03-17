@@ -6,6 +6,7 @@ import {
     errorLogger 
 } from './src/middleware/logger.js';
 import userRouter from "./src/routers/userRouter.js";
+import authRoutes from "./src/routes/authRoute.js";
 
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(requestLogger);
 
 
 app.use('/users', userRouter);
+app.use('/auth', authRoutes);
 
 // ใช้ Logger middleware สำหรับบันทึกข้อมูลข้อผิดพลาด
 app.use(errorLogger); 

@@ -7,6 +7,17 @@ export const sendSuccess = (res, data, message = 'success', statusCode = 200) =>
     });
 };
 
+
+export const sendSuccessWithPagination = (res, data, total, message = 'success', statusCode = 200) => {
+    res.status(statusCode).json({
+        success: true,
+        message: message,
+        total: total,
+        data: data
+    });
+};
+
+
 export const sendError = (res, message = 'error', statusCode = 500) => {
     res.status(statusCode).json({
         success: false,
@@ -15,3 +26,4 @@ export const sendError = (res, message = 'error', statusCode = 500) => {
         data: []
     });
 };
+

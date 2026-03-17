@@ -19,7 +19,6 @@ app.use(express.json());
 // ใช้ Logger middleware สำหรับบันทึกข้อมูลการร้องขอ
 app.use(requestLogger); 
 
-
 app.use('/users', userRouter);
 app.use('/auth', authRoutes);
 

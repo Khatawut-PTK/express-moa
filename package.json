@@ -8,5 +8,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
   }
 }

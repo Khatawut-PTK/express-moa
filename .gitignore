@@ -1,2 +1,8 @@
-/.env
-/.logs
+.env
+.env.local
+.env.*.locals
+
+
+node_modules/
+logs/
+*.log

@@ -34,6 +34,10 @@ export const login = async (req, res) => {
         return res.status(400).json({ message: "ไม่พบผู้ใช้" });
     }
 
+    if (rows[0].status === 0) {
+        return res.status(400).json({ message: "ผู้ใช้ถูกปิดใช้งานติดต่อเจ้าหน้าที่" });
+    }
+
     const user = rows[0];
 
     const validPass = await bcrypt.compare(password, user.password);
@@ -56,6 +60,7 @@ export const login = async (req, res) => {
         fullName: user.fullName, 
         position: user.position,
         role: user.role, 
+        status: user.status,
         createdAt: user.createdAt 
     };
 
